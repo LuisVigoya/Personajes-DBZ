@@ -5,12 +5,12 @@
 
 <div class="row">
 
-  <div class="col-sm-6 mb-3">
-    <app-dbz-list [characterList]="characters"></app-dbz-list>
+  <div class="col-sm mb-3">
+    <app-dbz-list [characterList]="characters" (emitDeleteCharacter)="deleteCharacterList($event)"></app-dbz-list>
   </div>
 
-  <div class="col-sm-6" >
-    <app-dbz-add-character></app-dbz-add-character>
+  <div class="col-sm" >
+    <app-dbz-add-character (emitNewCharacter)="addCharacterList($event)"></app-dbz-add-character>
   </div>
 
 </div>
